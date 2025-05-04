@@ -4,7 +4,7 @@
 <section class="container mt-5">
     <div class="d-flex justify-content-between align-items-center mb-4">
         <h3 class="mb-0">Book List</h3>
-        <a href="/book-create.html" class="btn btn-success">
+        <a href="{{ route('books.create') }}" class="btn btn-success">
             <i class="bi bi-plus-circle"></i> Add New Book
         </a>
     </div>
