@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\BookStoreRequest;
+use App\Models\Book;
 use Illuminate\Http\Request;
 
 class BookController extends Controller
@@ -28,8 +29,20 @@ class BookController extends Controller
      */
     public function store(BookStoreRequest $request)
     {
+        $imageCover = $request->file('book_cover');
+        $imagePath = $imageCover->store('uploads', 'public');
 
-        dd($request->all());
+        $book = new Book();
+        $book->book_title = $request->book_title;
+        $book->book_author = $request->book_author;
+        $book->book_cover = $imagePath;
+        $book->book_description = $request->book_description;
+        $book->book_publish_date = $request->book_publish_date;
+        $book->book_isbn = $request->book_isbn;
+        $book->save();
+
+        return redirect()->back();
+
     }
 
     /**

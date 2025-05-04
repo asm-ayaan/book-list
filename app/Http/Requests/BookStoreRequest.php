@@ -16,7 +16,7 @@ class BookStoreRequest extends FormRequest
     {
         return [
             'book_title' => ['required', 'string', 'max:255'],
-            'author_name' => ['required', 'string', 'max:50'],
+            'book_author' => ['required', 'string', 'max:50'],
             'book_description' => ['required', 'string'],
             'book_cover' => ['required', 'image'],
             'book_publish_date' => ['required', 'date'],

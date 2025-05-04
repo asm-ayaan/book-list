@@ -12,19 +12,19 @@
                         @csrf
                         <div class="mb-3">
                             <label for="bookTitle" class="form-label">Book Title</label>
-                            <input type="text" class="form-control" id="bookTitle" name="book_title">
+                            <input type="text" class="form-control" id="bookTitle" name="book_title" value="{{ old('book_title') }}">
                             <span class="text-danger">{{ $errors->first('book_title') }}</span>
                         </div>
                         
                         <div class="mb-3">
                             <label for="authorName" class="form-label">Author Name</label>
-                            <input type="text" class="form-control" id="authorName" name="author_name">
-                            <span class="text-danger">{{ $errors->first('author_name') }}</span>
+                            <input type="text" class="form-control" id="authorName" name="book_author" value="{{ old('book_author') }}">
+                            <span class="text-danger">{{ $errors->first('book_author') }}</span>
                         </div>
                         
                         <div class="mb-3">
                             <label for="description" class="form-label">Description</label>
-                            <textarea class="form-control" id="description" rows="4" name="book_description" ></textarea>
+                            <textarea class="form-control" id="description" rows="4" name="book_description" >{{ old('book_description') }}</textarea>
                             <span class="text-danger">{{ $errors->first('book_description') }}</span>
                         </div>
                         
@@ -36,13 +36,13 @@
                         
                         <div class="mb-3">
                             <label for="publishDate" class="form-label">Publication Date</label>
-                            <input type="date" class="form-control" id="publishDate" name="book_publish_date">
+                            <input type="date" class="form-control" id="publishDate" name="book_publish_date" value="{{ old('book_publish_date') }}">
                             <span class="text-danger">{{ $errors->first('book_publish_date') }}</span>
                         </div>
                         
                         <div class="mb-3">
                             <label for="isbn" class="form-label">ISBN</label>
-                            <input type="text" class="form-control" id="isbn" name="book_isbn">
+                            <input type="text" class="form-control" id="isbn" name="book_isbn" value="{{ old('book_isbn') }}">
                             <span class="text-danger">{{ $errors->first('book_isbn') }}</span>
                         </div>
                         
