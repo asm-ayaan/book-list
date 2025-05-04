@@ -13,31 +13,37 @@
                         <div class="mb-3">
                             <label for="bookTitle" class="form-label">Book Title</label>
                             <input type="text" class="form-control" id="bookTitle" name="book_title">
+                            <span class="text-danger">{{ $errors->first('book_title') }}</span>
                         </div>
                         
                         <div class="mb-3">
                             <label for="authorName" class="form-label">Author Name</label>
                             <input type="text" class="form-control" id="authorName" name="author_name">
+                            <span class="text-danger">{{ $errors->first('author_name') }}</span>
                         </div>
                         
                         <div class="mb-3">
                             <label for="description" class="form-label">Description</label>
                             <textarea class="form-control" id="description" rows="4" name="book_description" ></textarea>
+                            <span class="text-danger">{{ $errors->first('book_description') }}</span>
                         </div>
                         
                         <div class="mb-3">
                             <label for="bookCover" class="form-label">Book Cover</label>
                             <input type="file" class="form-control" id="bookCover" accept="image/*" name="book_cover">
+                            <span class="text-danger">{{ $errors->first('book_cover') }}</span>
                         </div>
                         
                         <div class="mb-3">
                             <label for="publishDate" class="form-label">Publication Date</label>
                             <input type="date" class="form-control" id="publishDate" name="book_publish_date">
+                            <span class="text-danger">{{ $errors->first('book_publish_date') }}</span>
                         </div>
                         
                         <div class="mb-3">
                             <label for="isbn" class="form-label">ISBN</label>
                             <input type="text" class="form-control" id="isbn" name="book_isbn">
+                            <span class="text-danger">{{ $errors->first('book_isbn') }}</span>
                         </div>
                         
                         <div class="d-flex gap-2">
