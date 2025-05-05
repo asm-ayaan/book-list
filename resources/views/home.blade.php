@@ -41,7 +41,7 @@
                         <td>{{ $book->book_author }}</td>
                         <td>
                             <div class="btn-group" role="group">
-                                <a href="/book-view.html" class="btn btn-info btn-sm text-white">
+                                <a href="{{ route('books.show', $book->id) }}" class="btn btn-info btn-sm text-white">
                                     <i class="bi bi-eye"></i> View
                                 </a>
                                 <button type="button" class="btn btn-primary btn-sm">
