@@ -25,20 +25,20 @@
                     </tr>
                 </thead>
                 <tbody>
+                    @foreach($books as $book)
                     <tr>
-                        <th scope="row">1</th>
+                        <th scope="row">{{ $loop->iteration }}</th>
                         <td>
-                            <img src="{{ asset('/assets/images/image_1.jpg') }}" alt="Book Cover" class="img-thumbnail"
+                            <img src="{{ asset($book->book_cover) }}" alt="Book Cover" class="img-thumbnail"
                                 style="width: 100px;">
                         </td>
                         <td>
                             <a href="/book-view.html" class="text-decoration-none text-dark">
-                                <h5 class="mb-2">The Great Gatsby</h5>
+                                <h5 class="mb-2">{{ $book->book_title }}</h5>
                             </a>
-                            <p class="text-muted mb-0">A story of decadence and excess, Gatsby explores the darker aspects
-                                of the Jazz Age.</p>
+                            <p class="text-muted mb-0">{{ $book->book_description }}</p>
                         </td>
-                        <td>F. Scott Fitzgerald</td>
+                        <td>{{ $book->book_author }}</td>
                         <td>
                             <div class="btn-group" role="group">
                                 <a href="/book-view.html" class="btn btn-info btn-sm text-white">
@@ -53,6 +53,7 @@
                             </div>
                         </td>
                     </tr>
+                    @endforeach
 
                 </tbody>
             </table>
