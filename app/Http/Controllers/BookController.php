@@ -41,7 +41,7 @@ class BookController extends Controller
         $book->book_isbn = $request->book_isbn;
         $book->save();
 
-        return redirect()->back();
+        return redirect()->route('books.index')->with('success', 'Book Created Successfully!');
 
     }
 
